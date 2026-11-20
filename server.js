@@ -4,6 +4,7 @@ import rateLimit from "express-rate-limit";
 import { GoogleGenAI } from "@google/genai";
 
 const app = express();
+app.set('trust proxy', 1);
 const PORT = process.env.PORT || 10000;
 
 app.use(cors({
